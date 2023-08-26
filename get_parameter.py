@@ -1,8 +1,9 @@
 import yaml
+import requests 
 
 def get_parameter(file_path):
-    with open(file_path, 'r') as file:
-        parameter = yaml.safe_load(file)
+    r = requests.get(file_path)
+    parameter = yaml.safe_load(r.content)
 
     return parameter
 
