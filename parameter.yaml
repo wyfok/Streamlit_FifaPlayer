@@ -1,0 +1,3 @@
+input_file_path:
+    Male: 'https://raw.githubusercontent.com/wyfok/Streamlit_FifaPlayer/main/data/players_22.csv'
+    Female: 'https://raw.githubusercontent.com/wyfok/Streamlit_FifaPlayer/main/data/female_players_22.csv'
