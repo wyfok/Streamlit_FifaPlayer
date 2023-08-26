@@ -1,0 +1,46 @@
+class Player:
+    def __init__(self, id_result, raw_df):
+        player = raw_df.loc[id_result]
+        self.sofifa_id  = player['sofifa_id']
+        self.player_url  = player['player_url']
+        self.short_name  = player['short_name']
+        self.long_name  = player['long_name']
+        self.player_positions  = player['player_positions']
+        self.overall  = player['overall']
+        self.potential  = player['potential']
+        self.value_eur  = player['value_eur']
+        self.wage_eur  = player['wage_eur']
+        self.age  = player['age']
+        self.dob  = player['dob']
+        self.height_cm  = player['height_cm']
+        self.weight_kg  = player['weight_kg']
+        self.club_team_id  = player['club_team_id']
+        self.club_name  = player['club_name']
+        self.league_name  = player['league_name']
+        self.league_level  = player['league_level']
+        self.club_position  = player['club_position']
+        self.nationality_id  = player['nationality_id']
+        self.nationality_name  = player['nationality_name']
+        self.nation_team_id  = player['nation_team_id']
+        self.nation_position  = player['nation_position']
+        self.preferred_foot  = player['preferred_foot']
+        self.weak_foot  = player['weak_foot']
+        self.real_face  = player['real_face']
+        self.skill_moves  = player['skill_moves']
+        self.pace  = player['pace']
+        self.shooting  = player['shooting']
+        self.passing  = player['passing']
+        self.dribbling  = player['dribbling']
+        self.defending  = player['defending']
+        self.physic  = player['physic']
+        self.player_face_url  = player['player_face_url']
+        self.club_flag_url  = player['club_flag_url']
+        self.club_logo_url  = player['club_logo_url']
+        self.nation_logo_url  = player['nation_logo_url']
+        self.nation_flag_url  = player['nation_flag_url']
+        
+        self.feature = player[['pace','shooting','passing','dribbling','defending','physic']].agg(list)
+        
+
+        
+    
